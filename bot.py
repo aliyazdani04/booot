@@ -6,8 +6,6 @@ from rubika.client import Bot
 import requests
 from rubika.tools import Tools
 from rubika.encryption import encryption
-from gtts import gTTS
-from mutagen.mp3 import MP3
 import time
 import random
 import urllib
@@ -104,6 +102,12 @@ while True:
 								bot.sendMessage(target, "سازندم  @ali_yazdani04", message_id=msg.get("message_id"))
 							except:
 								print("err admin")
+								
+						elif msg.get("text").startswith("لینک") or msg.get("text").startswith("link"):
+							try:
+								bot.sendMessage(target, "https://rubika.ir/joing/CAFDBBDH0YRBYHPEPOYXQZAYVXJSJCHD", message_id=msg.get("message_id"))
+							except:
+								print("err CheKhabar")			
 								
 						elif msg.get("text").startswith("حذف") and msg.get("author_object_guid") in admins :
 							try:
